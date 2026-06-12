@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner sc=new scanner(System.in);
+	    System.out.print("Enter String s1: ");
+	    String s1=sc.nextLine();
+	    System.out.print("Enter String s2: ");
+	    String s2=sc.nextLine();
+	    array.sort(a);
+	    array.sort(b);
+	    if(array.equal (a,b)){
+	        System.out.println("Strings are anagram: ");
+	    }
+	    else{
+	        System.out.println("Strings are not anagram: ");
+	    }
+	}	
+	}
