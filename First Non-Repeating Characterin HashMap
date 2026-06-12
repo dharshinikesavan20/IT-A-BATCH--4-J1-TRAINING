@@ -1,0 +1,25 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+
+        String str = "AABBCDE";
+
+        HashMap<Character, Integer> charCount = new HashMap<>();
+
+        for (char ch : str.toCharArray()) {
+            if (charCount.containsKey(ch)) {
+                charCount.put(ch, charCount.get(ch) + 1);
+            } else {
+                charCount.put(ch, 1);
+            }
+        }
+
+        for (char ch : str.toCharArray()) {
+            if (charCount.get(ch) == 1) {
+                System.out.println("First Non-Repeating Character: " + ch);
+                break;
+            }
+        }
+    }
+}
