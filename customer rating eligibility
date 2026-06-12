@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter the rating for order 1: ");
+        int o1 = sc.nextInt();
+        
+        System.out.print("\nEnter the rating for order 2: ");
+        int o2 = sc.nextInt();
+        
+        System.out.print("\nEnter the rating for order 3: ");
+        int o3 = sc.nextInt();
+        
+        System.out.print("\nEnter the rating for order 4: ");
+        int o4 = sc.nextInt();
+        
+         System.out.print("\nEnter the rating for order 5: ");
+        int o5 = sc.nextInt();
+        
+        if(o1 <=5 && o1>= 1 && o2 <=5 && o2 >= 1 && o3 <=5 && o3>= 1 && o4 <=5 && o4>= 1 && o5 <=5 && o5>= 1 ){
+            int avg = (o1 + o2 + o3 + o4 + o5) / 5;
+            
+            if(avg >= 3.8){
+            System.out.println("\n\nYou are ELIGIBLE.");
+            }
+            
+            else{
+                System.out.println("\n\n You are NOT ELIGIBLE.");
+            }
+        }
+        else{
+            System.out.println("\n\n INVALID INPUT. THE RANGE SHOULD BE FROM 1 TO 5.");
+        }
+        
+    }
+}
