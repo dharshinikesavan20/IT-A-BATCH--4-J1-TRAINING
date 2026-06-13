@@ -1,0 +1,107 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        String s = sc.nextLine().toLowerCase();
+
+        if (s.equals("menu")) {
+            System.out.println("==== MENU =====");
+            System.out.println("juice");
+            System.out.println("biriyani");
+            System.out.println("desert");
+            System.out.println("dosai");
+
+            System.out.print("Enter category: ");
+            s = sc.nextLine().toLowerCase();
+        }
+
+        if (s.equals("juice")) {
+            System.out.println("======= JUICE CATEGORY =======");
+            System.out.println("1. mango juice = 50");
+            System.out.println("2. apple juice = 100");
+            System.out.println("3. pomagranet juice = 80");
+            System.out.println("4. watermelon juice = 30");
+            System.out.println("5. orange juice = 40");
+        } 
+        else if (s.equals("biriyani")) {
+            System.out.println("======= BIRIYANI CATEGORY =======");
+            System.out.println("1. mutton biriyani = 400");
+            System.out.println("2. chicken biriyani = 300");
+            System.out.println("3. panner biriyani = 200");
+        } 
+        else if (s.equals("desert")) {
+            System.out.println("======= DESERT CATEGORY =======");
+            System.out.println("1. mango icecream = 50");
+            System.out.println("2. apple icecream = 100");
+            System.out.println("3. pomagranet icecream = 80");
+            System.out.println("4. watermelon icecream = 30");
+            System.out.println("5. orange icecream = 40");
+        } 
+        else if (s.equals("dosai")) {
+            System.out.println("======= DOSAI CATEGORY =======");
+            System.out.println("1. garlic dosai = 50");
+            System.out.println("2. chocolate dosai = 100");
+            System.out.println("3. masala dosai = 80");
+        } 
+        else {
+            System.out.println("Please enter a valid category");
+            return;
+        }
+
+        System.out.print("How many orders? ");
+        int order = sc.nextInt();
+
+        int sum = 0;
+
+        for (int i = 0; i < order; i++) {
+
+            System.out.print("Enter item number: ");
+            int choice = sc.nextInt();
+
+            System.out.print("Enter quantity: ");
+            int qty = sc.nextInt();
+
+            if (s.equals("juice")) {
+                switch (choice) {
+                    case 1: sum += 50 * qty; break;
+                    case 2: sum += 100 * qty; break;
+                    case 3: sum += 80 * qty; break;
+                    case 4: sum += 30 * qty; break;
+                    case 5: sum += 40 * qty; break;
+                    default: System.out.println("Invalid item");
+                }
+            }
+            else if (s.equals("biriyani")) {
+                switch (choice) {
+                    case 1: sum += 400 * qty; break;
+                    case 2: sum += 300 * qty; break;
+                    case 3: sum += 200 * qty; break;
+                    default: System.out.println("Invalid item");
+                }
+            }
+            else if (s.equals("desert")) {
+                switch (choice) {
+                    case 1: sum += 50 * qty; break;
+                    case 2: sum += 100 * qty; break;
+                    case 3: sum += 80 * qty; break;
+                    case 4: sum += 30 * qty; break;
+                    case 5: sum += 40 * qty; break;
+                    default: System.out.println("Invalid item");
+                }
+            }
+            else if (s.equals("dosai")) {
+                switch (choice) {
+                    case 1: sum += 50 * qty; break;
+                    case 2: sum += 100 * qty; break;
+                    case 3: sum += 80 * qty; break;
+                    default: System.out.println("Invalid item");
+                }
+            }
+        }
+
+        System.out.println("Total Bill = " + sum);
+    }
+}
